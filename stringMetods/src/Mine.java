@@ -12,13 +12,8 @@ public class Mine {
 //        first.compare(text);
 
         Second second = new Second();
-        second.compare(text);
-
-
+        Second.compare(text);
     }
-
-
-
 }
 
 
