@@ -8,7 +8,7 @@ public class Main {
         String str = sc.nextLine();   //получаем данные
 
 //     исключаем цифры и пробел в начале строки и отфильтр. три слова, первые два с пробелами
-        Boolean in = str.matches("[^0-9\\s]([а-яА-ЯёЁ]+\\s+){2}[а-яА-ЯёЁ]+$");
+        Boolean in = str.matches("[^0-9\\s+]([а-яА-ЯёЁ]+\\s+){2}[а-яА-ЯёЁ]+$");
 //     System.out.println(str.matches("[^0-9\\s][а-яА-ЯёЁ]+\\s[а-яА-ЯёЁ]+\\s[а-яА-ЯёЁ]+$"));      // рабочий regex
 //     System.out.println(str.matches("[^0-9\\s]([а-яА-ЯёЁ]+\\s){2}[а-яА-ЯёЁ]+$"));       // рабочий   regex
 
