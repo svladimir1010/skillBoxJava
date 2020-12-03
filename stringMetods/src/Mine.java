@@ -11,11 +11,9 @@ public class Mine {
 //        FirstMethod first = new FirstMethod();
 //        first.compare(text);
 
-//        Second second = new Second();
-//        second.compare(text);
+        Second second = new Second();
+        second.compare(text);
 
-        Third third = new Third();
-        third.compare(text);
 
     }
 
