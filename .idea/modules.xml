@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/SkillBoxJava.iml" filepath="$PROJECT_DIR$/.idea/SkillBoxJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/arraysMethods/arraysMethods.iml" filepath="$PROJECT_DIR$/arraysMethods/arraysMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
     </modules>
   </component>
 </project>

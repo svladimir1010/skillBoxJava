@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85a80c39-f976-4271-9a59-234e4903df02" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/phone_book/src/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar-methods/out/production/calendar-methods/GetDayOfBirthday.class" beforeDir="false" afterPath="$PROJECT_DIR$/calendar-methods/out/production/calendar-methods/GetDayOfBirthday.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar-methods/out/production/calendar-methods/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/calendar-methods/out/production/calendar-methods/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calendar-methods/src/GetDayOfBirthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/calendar-methods/src/GetDayOfBirthday.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,9 +36,9 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="348" y="69" key="new project wizard" timestamp="1607247504758">
+    <state x="348" y="69" key="new project wizard" timestamp="1608845682260">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="348" y="69" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1607247504758" />
+    <state x="348" y="69" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1608845682260" />
   </component>
 </project>
