@@ -2,6 +2,7 @@ public class Second {
     public static void compare(String text) {
 
         String numbers = text.replaceAll("[^0-9]", " ");
+        System.out.println(numbers);
         String[] array = numbers.replaceAll("\\s+", " ").trim().split(" ");
         int number1 = Integer.parseInt(array[0]);
         int number2 = Integer.parseInt(array[1]);
