@@ -8,8 +8,9 @@ public class Loading {
         System.out.println(som + "/----/" + som.length());
         for (int i = 0; i < som.length(); i++) {
             System.out.println((int) som.charAt(i));
-
         }
     }
-
 }
+
+//    Что нужно сделать
+//        Распечатайте коды всех букв английского алфавита и сами буквы.

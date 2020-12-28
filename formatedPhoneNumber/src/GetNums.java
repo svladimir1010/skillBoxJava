@@ -7,7 +7,7 @@ public class GetNums {
         try {
             return sc.nextLine();
         } catch (Exception e) {
-            System.out.println("Попробуйте еще");
+            System.out.println("Попробуйте еще " + e);
             return "";
         }
     }

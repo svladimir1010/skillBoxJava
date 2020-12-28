@@ -13,8 +13,6 @@ public class Loader {
 //        phoneBook = new TreeMap<>() {{
 //            put("John", "0689012505");
 //            put("Bob", "+38 (096) 213-84-05");
-//            put("Aob", "+38 (099) 213-84-05");
-//            put("Buh", "+38 (067) 875-31-44");
 //        }};
         while (true) {
             System.out.println("Введите имя, номер или команду (LIST, EXIT): ");
@@ -52,7 +50,7 @@ public class Loader {
     }
 
     private static void addPhoneNumberToPhoneBook(String phoneNumber) {
-        System.out.println("Данный номер в базе не найден. Введите имя чтобы внести его в справочник или QUIT:");
+        System.out.println("Данный номер в базе не найден. Введите имя чтобы внести его в справочник или \"QUIT\":");
         String name = reader.nextLine().trim();
         if (name.equalsIgnoreCase("QUIT")) return;
         if (name.matches(VALID_NAME)) phoneBook.put(phoneNumber, name);

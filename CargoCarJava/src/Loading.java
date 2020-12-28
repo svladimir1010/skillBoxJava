@@ -4,9 +4,8 @@ public class Loading {
     private static final int BOX_COUNT = 27;       // MAX ящиков в одном контейнере
     private static final int CONTAIN_COUNT = 12;   // MAX контейнеров на одной машине
 
-
     public static void main(String[] args) {
-        int count = readConsole();                     // получаем submit from terminal
+        int count = readConsole();                     // get data from terminal
 
         int countCar = ((count % 324) >= 0) ? count / 324 + 1 : count / 324;  // сколько всего машин
 
@@ -34,7 +33,6 @@ public class Loading {
                 Car car = new Car(i, j, lastContFit);
             }
         }
-
     }
 
     //===================       get count
@@ -78,17 +76,13 @@ public class Loading {
         private String contNum;
 
         public Container(int id, int countBox) {
-
             this.contNum = "C O N T A I N E R - " + id;
             System.out.println("hello " + this.contNum);
             for (int i = 1; i <= countBox; i++) {
                 Box box = new Box(i);
                 System.out.println("box: " + box.boxId);
-
             }
-
         }
-
     }
 
     //========================  get box

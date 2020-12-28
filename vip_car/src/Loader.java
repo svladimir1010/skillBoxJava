@@ -6,7 +6,7 @@ public class Loader {
     private static HashSet<String> vipCarNumHash = new HashSet<>();
     private static long[] time = new long[]{0, 0};
     private static int region = 199;
-    private static String[] lettersOfNumber = {"A", "B", "E", "K", "M", "H", "O", "P", "C", "T", "Y", "X"};
+    private static String[] lettersOfCarNumber = {"A", "B", "E", "K", "M", "H", "O", "P", "C", "T", "Y", "X"};
     private static final String REGEX_CAR_NUM = "(A|B|E|K|M|H|O|P|C|T|Y|X)\\d{3}(A|B|E|K|M|H|O|P|C|T|Y|X){2}\\d{1,3}";
     private static Scanner inpNum = new Scanner(System.in);
 
@@ -14,7 +14,7 @@ public class Loader {
         generatorNumbers();
         while (true) {
             boolean result;
-            System.out.println("Please enter car number like \"A111BC197\", or command \"EXIT\": ");
+            System.out.println("Please enter car number like this \"A111BC197\", or command \"EXIT\": ");
             String str = inpNum.nextLine().trim();
             System.out.println(str);
             boolean findResult;
@@ -55,9 +55,9 @@ public class Loader {
     private static void generatorNumbers() {
         for (int i = 1000; i > 0; i--) {
             String num = "";
-            for (String letterOne : lettersOfNumber) {
-                for (String letterTwo : lettersOfNumber) {
-                    for (String letterThree : lettersOfNumber) {
+            for (String letterOne : lettersOfCarNumber) {
+                for (String letterTwo : lettersOfCarNumber) {
+                    for (String letterThree : lettersOfCarNumber) {
                         long generRegion = Math.round(Math.random() * region) >= 1 ? Math.round(Math.random() * region) : 1;
                         vipCarNumList.add(letterOne + (Math.round(Math.random() * 999)) + letterTwo + letterThree + generRegion);
                         vipCarNumTree.add(letterOne + (Math.round(Math.random() * 999)) + letterTwo + letterThree + generRegion);

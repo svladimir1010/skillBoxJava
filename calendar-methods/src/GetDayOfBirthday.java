@@ -2,11 +2,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class GetDayOfBirthday {
-    public static void getDay() {
 
+    public static void getDay() {
         Calendar calendar = Calendar.getInstance();
         int yearNow = calendar.getWeekYear();
-        
+
         calendar.set(Calendar.YEAR, 1977);
         calendar.set(Calendar.MONTH, Calendar.OCTOBER);
         calendar.set(Calendar.DAY_OF_MONTH, 10);
