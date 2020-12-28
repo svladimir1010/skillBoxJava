@@ -6,7 +6,7 @@ public class Loading {
 
         som = som.replaceAll("\\s+", "");
         System.out.println(som + "/----/" + som.length());
-        for (int i = 0; i <= som.length(); i++) {
+        for (int i = 0; i < som.length(); i++) {
             System.out.println((int) som.charAt(i));
 
         }
