@@ -5,7 +5,7 @@ public class Loader {
     private static TreeSet<String> vipCarNumTree = new TreeSet<>();
     private static HashSet<String> vipCarNumHash = new HashSet<>();
     private static long[] time = new long[]{0, 0};
-    private static int region = 199;
+    private static final int REGION = 199;
     private static String[] lettersOfCarNumber = {"A", "B", "E", "K", "M", "H", "O", "P", "C", "T", "Y", "X"};
     private static final String REGEX_CAR_NUM = "(A|B|E|K|M|H|O|P|C|T|Y|X)\\d{3}(A|B|E|K|M|H|O|P|C|T|Y|X){2}\\d{1,3}";
     private static Scanner inpNum = new Scanner(System.in);
@@ -35,6 +35,7 @@ public class Loader {
             time[1] = System.nanoTime();
             System.out.println("System.nanoTime(indexOf) = " + result + " number- " + str + " Time= " + (time[1] - time[0]));
 
+            Collections.sort(vipCarNumList);
             time[0] = System.nanoTime();
             result = Collections.binarySearch(vipCarNumList, str) >= 0 ? true : false;
             time[1] = System.nanoTime();
@@ -53,23 +54,27 @@ public class Loader {
     }
 
     private static void generatorNumbers() {
-        for (int i = 1000; i > 0; i--) {
-            String num = "";
+        for (int i = 1; i <= REGION; i++) {
+            String reg = "";
+            reg += i;
             for (String letterOne : lettersOfCarNumber) {
-                for (String letterTwo : lettersOfCarNumber) {
-                    for (String letterThree : lettersOfCarNumber) {
-                        long generRegion = Math.round(Math.random() * region) >= 1 ? Math.round(Math.random() * region) : 1;
-                        vipCarNumList.add(letterOne + (Math.round(Math.random() * 999)) + letterTwo + letterThree + generRegion);
-                        vipCarNumTree.add(letterOne + (Math.round(Math.random() * 999)) + letterTwo + letterThree + generRegion);
-                        vipCarNumHash.add(letterOne + (Math.round(Math.random() * 999)) + letterTwo + letterThree + generRegion);
-
+                for (int t = 0; t < 10; t++) {
+                    String ddd = "";
+                    ddd += letterOne + t + t + t;
+                    for (String letterTwo : lettersOfCarNumber) {
+                        for (String letterThree : lettersOfCarNumber) {
+                            String num = ddd + letterTwo + letterThree + reg;
+                            System.out.println(num);
+                            vipCarNumList.add(num);
+                            vipCarNumTree.add(num);
+                            vipCarNumHash.add(num);
+                        }
                     }
                 }
             }
         }
     }
 }
-
 //    Научиться сортировать и искать элементы в коллекциях.
 //        Что нужно сделать
 //
