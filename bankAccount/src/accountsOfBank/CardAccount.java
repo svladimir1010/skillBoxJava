@@ -5,7 +5,7 @@ public class CardAccount extends BankAccount {
 
     public void setWithdrawPercent(double money) {
         money += withPercent(money);
-        System.out.println("Сумма снятия с процентом :" + amount);
+        System.out.println("Сумма снятия с процентом :" + money);
         super.withdrawMoney(amount);
     }
 
