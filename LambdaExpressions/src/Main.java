@@ -2,6 +2,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
     private static String staffFile = "data/staff.txt";
@@ -18,11 +19,64 @@ public class Main {
 
 //        Collections.sort(staff, Comparator.comparing(Employee::getSalary)
 //                .thenComparing(Employee::getName));
-        //============================
+        //============================  метод sorted by stream()
 
-        for (Employee employee : staff) {
-            System.out.println(employee.toString());
-        }
+//        staff.stream().sorted(Comparator.comparing(Employee::getSalary))
+//                .forEach(System.out::println);
+
+        //=============================   получение максимального значения (работник с наибольшей зарпл) с помощью  STREAM max
+
+//        staff.stream().max(Comparator.comparing(Employee::getSalary))
+//                .ifPresent(System.out::println);
+
+        //  ===========================  методы MAP() и REDUCE() by STREAM()
+
+        staff.stream()
+                .map(e -> e.getSalary())
+                .filter(s -> s >= 100000)
+                .reduce((s1, s2) -> s1 + s2).ifPresent(System.out::println);
+
+
+        //  ===========================
+
+//        for (Employee employee : staff) {
+//            System.out.println(employee.toString());
+//        }
+        //============================  =============================    example with using forEach
+
+        System.out.println("BEFORE");
+        staff.forEach(System.out::println);
+
+        System.out.println("AFTER");
+        int salaryIncrease = 10000;
+        staff.forEach(e -> e.setSalary(e.getSalary() + salaryIncrease));
+        staff.forEach(System.out::println);
+
+        System.out.println("EVEN AFTER");
+
+        // ===================                     вызов STREAM из коллекции
+
+        Stream<Employee> stream = staff.stream();
+
+        stream.filter(e -> e.getSalary() >= 100000)
+                .forEach(System.out::println);
+//================================= выводим четные числа
+
+        Stream<Integer> numbers = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        numbers.filter(e -> e % 2 == 0).forEach(System.out::println);
+
+        //=========================
+        Integer[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 100};
+        Arrays.stream(nums).forEach(e -> System.out.println(e));
+
+        //=============================   бесконечный Stream
+
+        Stream.iterate(1, n -> n + 1).forEach(System.out::println);
+
+        //=============================   бесконечный Stream
+
+        Stream.generate(() -> "YYYYYY").forEach(System.out::println);
+
     }
 
     private static ArrayList<Employee> loadStaffFromFile() {
