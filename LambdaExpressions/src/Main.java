@@ -9,9 +9,15 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Employee> staff = loadStaffFromFile();
-        //============================ одновременное сравнение по двум параметрам с "Lambda"
-        Collections.sort(staff, Comparator.comparing(Employee::getSalary)
-                .thenComparing(Employee::getName));
+        //============================ одновременное сравнение по двум параметрам с "Lambda" и "Comparator.comparing"
+
+        Collections.sort(staff, Comparator.<Employee>comparingInt(o1 -> o1.getSalary())
+                .thenComparing(o2 -> o2.getName())
+        );
+        // ==========================  одновременное сравнение по двум параметрам  with  only  "Comparator.comparing"
+
+//        Collections.sort(staff, Comparator.comparing(Employee::getSalary)
+//                .thenComparing(Employee::getName));
         //============================
 
         for (Employee employee : staff) {
