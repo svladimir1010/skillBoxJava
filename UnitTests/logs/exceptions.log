@@ -1,0 +1,5 @@
+2021-02-04 21:06:13.281 [main] ERROR ErrorLog - No line found
+java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1651) ~[?:?]
+	at Main.takeStation(Main.java:83) ~[classes/:?]
+	at Main.main(Main.java:44) [classes/:?]
